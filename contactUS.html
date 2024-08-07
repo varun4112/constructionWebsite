@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./contactUS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Constructions - Contact US</title>
+  </head>
+  <body>
+    <!-- <header>
+      <div id="navigationBar">
+        <div id="logoDiv"><b>Company Logo</b></div>
+        <div id="navDiv">
+          <ul id="navList">
+            <li class="navListItem">
+              <a class="navLink" href="./index.html">Home</a>
+            </li>
+            <li class="navListItem">
+              <a class="navLink" href="./contactUS.html">item</a>
+            </li>
+            <li class="navListItem">
+              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
+                >item</a
+              >
+            </li>
+            <li class="navListItem">
+              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
+                >item</a
+              >
+            </li>
+            <li class="navListItem">
+              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
+                >item</a
+              >
+            </li>
+            <li class="navListItem">
+              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+    </header> -->
+
+    <main>
+      <section id="contactUsMain"></section>
+      <h1 id="ContactUsHeading">CONTACT US</h1>
+
+      <!-- LOCATIONS SECTION -->
+      <section id="locationsSection">
+        <h2 id="locationHeading">OUR LOCATIONS</h2>
+        <div class="row">
+          <div class="col">
+            <p class="locationCity">Kakanad</p>
+            <p>
+              207, Second Floor, World Trade Center,<br />
+              P.O, Infopark, Kakkanad, Kochi, <br />Kerala - 682042
+            </p>
+          </div>
+          <div class="col">
+            <p class="locationCity">Koratty</p>
+            <p>
+              Chembakam Block Infopark Thrissur,
+              <br />
+              Nalukettu Road, Koratty<br />Kerala - 680 308
+            </p>
+          </div>
+          <div class="col">
+            <p class="locationCity">Kozhikode</p>
+            <p>
+              28/1650D, Cyberpark Kozhikode Park Rd,
+              <br />
+              Nellikkode, Kozhikode, <br />
+              Kerala - 673016
+            </p>
+          </div>
+        </div>
+      </section>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.442606062643!2d76.3644294!3d10.0077181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d2c3ed3aaa5%3A0x3b92abac996f20ee!2sTechfriar%20Technologies!5e0!3m2!1sen!2sin!4v1722915544374!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <!-- FEEDBACK SECTION -->
+      <section id="feedback">
+        <form>
+          <h2 id="feedbackHeading">GIVE US YOUR FEEDBACK</h2>
+          <div id="feedbackGroup1">
+            <input
+              class="inputGroup1"
+              type="text"
+              id="feedbackName"
+              placeholder="Your Name"
+            />
+            <!-- <input
+              class="inputGroup1"
+              type="number"
+              id="feedbackNumber"
+              placeholder="Phone Number"
+              maxlength="10"
+            /> -->
+            <input
+              type="tel"
+              id="feedbackNumber"
+              class="inputGroup1"
+              name="phone"
+              placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              maxlength="10"
+            />
+          </div>
+
+          <div id="feedbackGroup2">
+            <input
+              class="inputGroup1"
+              type="email"
+              name="feedbackEmail"
+              id="feedbackEmail"
+              placeholder="Email"
+            />
+            <input
+              class="inputGroup1"
+              type="text"
+              name="feedbackOrganisation"
+              id="feedbackOrganisation"
+              placeholder="Your Organisation"
+            />
+          </div>
+          <div>
+            <textarea
+              name="feedback"
+              id="feedbackText"
+              placeholder="Your Feedback"
+            ></textarea>
+          </div>
+          <div id="submitGroup">
+            <button id="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- FOLLOW US SECTION -->
+
+      <footer>
+        <div id="followUs">
+          <h2 id="followUsHeading">FOLLOW US ON</h2>
+          <ul id="followUsList">
+            <li class="followUsLi">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook-f fa-2xl"></i
+              ></a>
+            </li>
+            <li class="followUsLi">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="followUsLi">
+              <a href="https://www.linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin-in fa-2xl"></i>
+              </a>
+            </li>
+            <li class="followUsLi">
+              <a href="https://x.com/home" target="_blank"
+                ><i class="fa-brands fa-x-twitter fa-2xl"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <hr id="footerhr" />
+        <p>Copyright©2024 All rights reserved. Powered by Varun</p>
+      </footer>
+    </main>
+  </body>
+</html>
