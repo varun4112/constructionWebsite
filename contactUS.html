@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./contactUS.css" />
+    <link rel="stylesheet" href="./navigationBar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -20,46 +21,49 @@
     <title>Constructions - Contact US</title>
   </head>
   <body>
-    <!-- <header>
-      <div id="navigationBar">
-        <div id="logoDiv"><b>Company Logo</b></div>
-        <div id="navDiv">
-          <ul id="navList">
-            <li class="navListItem">
-              <a class="navLink" href="./index.html">Home</a>
-            </li>
-            <li class="navListItem">
-              <a class="navLink" href="./contactUS.html">item</a>
-            </li>
-            <li class="navListItem">
-              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
-                >item</a
-              >
-            </li>
-            <li class="navListItem">
-              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
-                >item</a
-              >
-            </li>
-            <li class="navListItem">
-              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
-                >item</a
-              >
-            </li>
-            <li class="navListItem">
-              <a class="navLink" href="./Pages/ContactUs/contactUS.html"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">CONSTRUCTIONS</a>
         </div>
-      </div>
-      <hr />
-    </header> -->
-
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./career.html">Career</a></li>
+          <li><a href="./contactUS.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
     <main>
       <section id="contactUsMain"></section>
-      <h1 id="ContactUsHeading">CONTACT US</h1>
+
+      <section id="locationsSection">
+        <h1 id="ContactUsHeading">CONTACT US</h1>
+        <div class="row">
+          <div class="col">
+            <p class="locationCity">Head Office -Kakanad</p>
+            <p>
+              207, Second Floor, World Trade Center,<br />
+              P.O, Infopark, Kakkanad, Kochi, <br />Kerala - 682042
+            </p>
+          </div>
+          <div class="col">
+            <p class="locationCity">Phone</p>
+            <p>+91 7410852963</p>
+          </div>
+          <div class="col" onclick="handleEmail()">
+            <p class="locationCity">Email</p>
+            <p>varun@gmail.com</p>
+          </div>
+        </div>
+      </section>
 
       <!-- LOCATIONS SECTION -->
       <section id="locationsSection">
@@ -91,15 +95,17 @@
           </div>
         </div>
       </section>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.442606062643!2d76.3644294!3d10.0077181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d2c3ed3aaa5%3A0x3b92abac996f20ee!2sTechfriar%20Technologies!5e0!3m2!1sen!2sin!4v1722915544374!5m2!1sen!2sin"
-        width="100%"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <section id="iframe">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.442606062643!2d76.3644294!3d10.0077181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d2c3ed3aaa5%3A0x3b92abac996f20ee!2sTechfriar%20Technologies!5e0!3m2!1sen!2sin!4v1722915544374!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
 
       <!-- FEEDBACK SECTION -->
       <section id="feedback">
@@ -111,22 +117,16 @@
               type="text"
               id="feedbackName"
               placeholder="Your Name"
+              minlength="3"
             />
-            <!-- <input
-              class="inputGroup1"
-              type="number"
-              id="feedbackNumber"
-              placeholder="Phone Number"
-              maxlength="10"
-            /> -->
             <input
               type="tel"
               id="feedbackNumber"
               class="inputGroup1"
               name="phone"
               placeholder="Phone Number"
-              pattern="[0-9]{10}"
-              maxlength="10"
+              size="10"
+              minlength="10"
             />
           </div>
 
@@ -162,6 +162,7 @@
       <!-- FOLLOW US SECTION -->
 
       <footer>
+        <div class="divider"></div>
         <div id="followUs">
           <h2 id="followUsHeading">FOLLOW US ON</h2>
           <ul id="followUsList">
@@ -191,5 +192,10 @@
         <p>Copyright©2024 All rights reserved. Powered by Varun</p>
       </footer>
     </main>
+    <script>
+      function handleEmail() {
+        window.location.href = `mailto:varun@gmail.com`;
+      }
+    </script>
   </body>
 </html>

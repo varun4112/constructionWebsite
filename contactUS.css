@@ -39,20 +39,32 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
-#ContactUsHeading {
+#ContactUsHeading,
+#locationHeading {
     color: #D4A741;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 20px 0;
+    grid-gap: 20px;
     padding-top: 25px;
 }
 
-#locationHeading {
-    color: #D4A741;
+#ContactUsHeading:after,
+#ContactUsHeading:before,
+#locationHeading:after,
+#locationHeading:before {
+    content: " ";
+    display: block;
+    border-bottom: 3px solid #D4A741;
 }
 
-#locationsSection {
+
+
+#locationsSection,
+#iframe {
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 50px;
@@ -69,9 +81,15 @@
 .col {
     border: 1px solid #D4A741;
     width: 350px;
+    height: 100px;
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 25px;
+}
+
+.col:hover {
+    border: 0;
+    box-shadow: 5px 10px #D4A741;
 }
 
 .locationCity {

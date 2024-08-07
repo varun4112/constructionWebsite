@@ -31,6 +31,12 @@
     font-size: 12px;
 }
 
+.divider {
+    height: 1px;
+    background-color: silver;
+    margin-top: 40px;
+}
+
 @media only screen and (max-width: 600px) {
 
     #followUsList {
