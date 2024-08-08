@@ -196,6 +196,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+    #bannerHeading2 {
+        font-size: 34px;
+        text-align: center;
+    }
+
     .col1 {
         display: none;
     }
@@ -219,6 +225,6 @@
 
     #homeBanner {
         background-image: linear-gradient(#D4A741, #D4A741);
-        height: 450px;
+        height: 300px;
     }
 }
