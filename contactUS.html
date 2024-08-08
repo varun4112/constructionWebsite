@@ -212,6 +212,17 @@
       function handleEmail() {
         window.location.href = `mailto:varun@gmail.com`;
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const burger = document.querySelector(".burger");
+        const navLinks = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", () => {
+          console.log("clicked");
+          navLinks.classList.toggle("active");
+          burger.classList.toggle("active");
+        });
+      });
     </script>
   </body>
 </html>

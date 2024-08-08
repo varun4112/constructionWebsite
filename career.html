@@ -205,5 +205,17 @@
         <p>Copyright©2024 All rights reserved. Powered by Varun</p>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const burger = document.querySelector(".burger");
+        const navLinks = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", () => {
+          console.log("clicked");
+          navLinks.classList.toggle("active");
+          burger.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
