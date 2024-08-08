@@ -111,6 +111,11 @@
 
 
 @media only screen and (max-width: 900px) {
+
+    #projectBanner {
+        display: none;
+    }
+
     .spotlightCard {
         display: block;
         flex-wrap: nowrap;

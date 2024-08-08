@@ -87,4 +87,9 @@ div.scroll-container img {
         padding: 0;
     }
 
+
+    #aboutBanner {
+        display: none;
+    }
+
 }

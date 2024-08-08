@@ -239,4 +239,8 @@ footer {
         padding-top: 20px;
         text-align: center;
     }
+
+    #contactUsMain {
+        display: none;
+    }
 }

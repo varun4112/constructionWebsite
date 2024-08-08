@@ -70,3 +70,10 @@
     margin: 10px 0;
     text-align: justify;
 }
+
+@media only screen and (max-width: 900px) {
+
+    #servicesBanner {
+        display: none;
+    }
+}
