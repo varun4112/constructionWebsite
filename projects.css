@@ -104,12 +104,6 @@
     display: none;
 }
 
-/* ONGOING */
-
-#ongoingProjects {}
-
-
-
 @media only screen and (max-width: 900px) {
 
     #projectBanner {
