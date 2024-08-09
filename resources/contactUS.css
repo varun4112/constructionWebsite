@@ -37,7 +37,7 @@
 
 #contactUsMain {
     height: 50vh;
-    background-image: url(./assets/contactUsImage.jpeg);
+    background-image: url(../assets/contactUsImage.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
