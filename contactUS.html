@@ -77,7 +77,7 @@
           </div>
           <div class="col" onclick="handleEmail()">
             <p class="locationCity">Email</p>
-            <p>varun@gmail.com</p>
+            <p>construction@gmail.com</p>
           </div>
         </div>
       </section>
@@ -136,6 +136,7 @@
               placeholder="Your Name"
               minlength="3"
             />
+      
             <input
               type="tel"
               id="feedbackNumber"
@@ -146,7 +147,12 @@
               minlength="10"
             />
           </div>
+          <div class="validation">
+            <div id="nameValidation" class="validation-message"></div>
 
+            <div id="phoneValidation" class="validation-message"></div>
+
+          </div>
           <div id="feedbackGroup2">
             <input
               class="inputGroup1"
@@ -155,6 +161,7 @@
               id="feedbackEmail"
               placeholder="Email"
             />
+      
             <input
               class="inputGroup1"
               type="text"
@@ -163,19 +170,23 @@
               placeholder="Your Organisation"
             />
           </div>
+          <div class="validation">
+            <div id="emailValidation" class="validation-message"></div>
+          </div>
           <div>
             <textarea
               name="feedback"
               id="feedbackText"
               placeholder="Your Feedback"
             ></textarea>
+            <div id="feedbackValidation" class="validation-message"></div>
           </div>
           <div id="submitGroup">
             <button id="submit">Submit</button>
           </div>
         </form>
       </section>
-
+      
       <!-- FOLLOW US SECTION -->
 
       <footer>
@@ -213,7 +224,7 @@
     </main>
     <script>
       function handleEmail() {
-        window.location.href = `mailto:varun@gmail.com`;
+        window.location.href = `mailto:construction@gmail.com`;
       }
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -226,6 +237,48 @@
           burger.classList.toggle("active");
         });
       });
+
+      document.querySelector('form').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Clear previous validation messages
+  document.querySelectorAll('.validation-message').forEach(function (msg) {
+    msg.textContent = '';
+  });
+
+  let isValid = true;
+
+  // Validate Name
+  const nameField = document.getElementById('feedbackName');
+  if (nameField.value.trim().length < 3) {
+    isValid = false;
+    document.getElementById('nameValidation').textContent =
+      'Name must be at least 3 characters long.';
+  }
+
+  // Validate Phone Number
+  const phoneField = document.getElementById('feedbackNumber');
+  if (phoneField.value.trim().length !== 10) {
+    isValid = false;
+    document.getElementById('phoneValidation').textContent =
+      'Phone number must be exactly 10 digits long.';
+  }
+
+  // Validate Email
+  const emailField = document.getElementById('feedbackEmail');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailField.value.trim())) {
+    isValid = false;
+    document.getElementById('emailValidation').textContent =
+      'Please enter a valid email address.';
+  }
+
+
+  // If the form is valid, you can proceed with form submission
+  if (isValid) {
+    alert('Form submitted successfully!');
+  }
+});
     </script>
   </body>
 </html>
